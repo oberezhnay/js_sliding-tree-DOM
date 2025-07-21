@@ -19,12 +19,14 @@ tree.addEventListener('click', (e) => {
     const title = e.target;
     const listToHide = title.nextElementSibling;
 
-    listToHide.classList.toggle('hidden');
+    if (listToHide) {
+      listToHide.classList.toggle('hidden');
 
-    if (listToHide.classList.contains('hidden')) {
-      listToHide.style.display = 'none';
-    } else {
-      listToHide.style.display = 'block';
+      if (listToHide.classList.contains('hidden')) {
+        listToHide.style.display = 'none';
+      } else {
+        listToHide.style.display = 'block';
+      }
     }
   }
 });
